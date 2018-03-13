@@ -3,13 +3,11 @@ import { HttpClient, HttpHeaders, HttpParams, HttpRequest } from '@angular/commo
 import 'rxjs/Rx';
 
 import { RecipeService } from '../recipes/recipe.service';
-import { AuthService } from '../auth/auth.service';
 import { Recipe } from '../recipes/recipe.model';
 
 @Injectable()
 export class DataStorageService {
-	constructor (private httpClient: HttpClient, private recipeService: RecipeService,
-				private authService: AuthService) {}
+	constructor (private httpClient: HttpClient, private recipeService: RecipeService) {}
 
 	storeRecipes() {
 //		return this.httpClient.put('https://recipe-book-80977.firebaseio.com/recipe.json?auth='+token, this.recipeService.getRecipes());
