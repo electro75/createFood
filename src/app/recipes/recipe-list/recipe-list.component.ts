@@ -14,13 +14,13 @@ import * as fromRecipe from '../store/recipe.reducers';
 export class RecipeListComponent implements OnInit {
 
 
-	recipes: Observable<fromRecipe.State>;
+	recipeState: Observable<fromRecipe.State>;
 
 	  constructor(private router: Router,	private route: ActivatedRoute,
 				  private store: Store<fromRecipe.FeatureState>) { }
 
  	ngOnInit() {
-	   this.recipes = this.store.select('recipes');
+	   this.recipeState = this.store.select('recipes');
  	}
 
 }
